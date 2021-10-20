@@ -1,0 +1,283 @@
+body {
+    outline: none;
+    margin: 0 auto;
+    height: 10000px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #afafdc;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 3%;
+    padding-right: 3%;
+    box-sizing: border-box;
+
+    box-shadow: 0px 8px 20px rgb(0 0 0 / 12%);
+}
+
+.logo {
+    font-family: Roboto, serif;
+    font-size: 50px;
+    color: white;
+}
+
+.search {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-input {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    outline: none;
+    border: none;
+    border-radius: 15px;
+
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user__box {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: white;
+
+    height: 30px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page__body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+
+    margin-top: 140px;
+}
+
+.posts__body {
+    width: 70%;
+}
+
+.tags__body {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.post {
+    width: 100%;
+
+    display: flex;
+    background-color: #d2e4c4;
+
+    padding: 30px;
+    box-sizing: border-box;
+
+    border-radius: 32px;
+    border: solid 1px #e2e2e2;
+    box-shadow: 0px 8px 20px rgb(0 0 0 / 12%);
+}
+
+.post_m {
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 70%;
+    /*display: flex;*/
+    object-fit: cover;
+}
+
+.left {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.right {
+    width: 80%;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag {
+    text-decoration: none;
+    border-radius: 10px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    border-width: 2px;
+    border-style: solid;
+
+    border-color: #84338d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags__tag {
+    font-size: 25px;
+    font-weight: bold;
+    color: #822e81;
+    padding-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags__body-title {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 0 10px 0;
+}
+
+.tags__body-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tags__body-tag-m {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.tags__body-members {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.member {
+    text-decoration: none;
+    border-radius: 10px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    border-width: 2px;
+    border-style: solid;
+
+    border-color: #84338d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title__text {
+    text-decoration: none;
+    color: #822e81;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.button__ask {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.page__bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+
+    margin-top: 40px;
+}
+
+.page__bar__button {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #822E81FF;
+}

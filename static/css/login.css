@@ -1,0 +1,281 @@
+body {
+    outline: none;
+    margin: 0 auto;
+    height: 10000px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #afafdc;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 3%;
+    padding-right: 3%;
+    box-sizing: border-box;
+
+    box-shadow: 0px 8px 20px rgb(0 0 0 / 12%);
+}
+
+.logo {
+    font-family: Roboto, serif;
+    font-size: 50px;
+    color: white;
+}
+
+.search {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-input {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    outline: none;
+    border: none;
+    border-radius: 15px;
+
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: white;
+
+    height: 30px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user__box {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+}
+
+.user__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.user__box__name {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    color: white;
+}
+.avatar {
+    display: flex;
+    /*justify-content: start;*/
+    padding-right: 10px;
+    width: 7%;
+    object-fit: cover;
+}
+
+.login__box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 160px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.wrong__pswd{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 15px;
+    color: red;
+}
+
+.login__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-size: 50px;
+}
+
+.login__input__box {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: end;*/
+    align-content: center;
+    margin-top: 20px;
+    /*align-content: center;*/
+    justify-content: center;
+}
+
+.login__input {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    outline: none;
+    /*border: none;*/
+    border-radius: 15px;
+
+    display: flex;
+    height: 30px;
+    width: 700px;
+    box-sizing: border-box;
+}
+
+.ligin__input__title {
+    display: flex;
+    font-size: 23px;
+    margin-right: 5px;
+}
+
+.button__login {
+    font-size: 25px;
+    border-radius: 20px;
+    width: 110px;
+    height: 40px;
+}
+
+.new__account {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.login__button__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.tag {
+    text-decoration: none;
+    border-radius: 10px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    border-width: 2px;
+    border-style: solid;
+
+    border-color: #84338d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags__tag {
+    font-size: 25px;
+    font-weight: bold;
+    color: #822e81;
+    padding-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags__body-title {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 0 10px 0;
+}
+
+.tags__body-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tags__body-tag-m {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.tags__body-members {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tags__body {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.member {
+    text-decoration: none;
+    border-radius: 10px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    border-width: 2px;
+    border-style: solid;
+
+    border-color: #84338d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
