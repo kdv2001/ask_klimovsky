@@ -1,17 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/question.css"/>
+    <link rel="stylesheet" href="{% static "css/index.css" %}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>question</title>
+    <title>index</title>
 </head>
 <body>
 <div class="header">
     <div class="logo">
         ASK KDV
     </div>
-
     <div class="search">
         <input class="search-input" type="text">
 
@@ -19,8 +19,6 @@
             ASK!
         </button>
     </div>
-
-
     <div class="buttons-wrapper">
         <div class="button">
             register
@@ -30,132 +28,167 @@
         </div>
     </div>
 </div>
-
 <div class="page__body">
-    <div class="left">
-        <div class="question__box">
-            <div class="avatar__main__box">
-                <img class="avatar__main"
-                     src="https://img2.freepng.ru/20180810/otz/kisspng-computer-icons-avatar-vector-graphics-icon-design-charlie-chaplin-icon-free-avatars-iconset-diversit-5b6d7ab287dce5.0643184415339014905565.jpg">
+    <div class="posts__body">
+        <div class="find__tags">
+            New Question
+            <a href="hot/" class="HOT__link">
+                Hot Question
+            </a>
+        </div>
+        <div class="post post_m">
+            <div class="left">
+                <img class="avatar" src="{% static "img/chaplin.jpg" %}">
+                <div class="name">
+                    Чарли Чаплин
+                </div>
                 <button type="image" class="like__box">
-                    <img src="img/like-10465.png" class="img__like">
+                    <img src="{% static "img/like-10465.png" %}" class="img__like">
                     <div class="like_font_box">
                         1к
                     </div>
                 </button>
             </div>
-            <div class="question__main__inf__box">
-                <div class="question__title">
-                    question??
-                </div>
-                <div class="main__inf">
-                    Повседневная практика показывает, что консультация сироким активом обеспечивает широкому кругу
-                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
-                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
-                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
-                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
-                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
-                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
-                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
-                    системы обучения кадров, соответствует насущным потребностям.
-                </div>
-                <div class="tags__box">
-                    <div class="tags">
-                        Tags:
-                    </div>
-                    <a href="#" class="tag__question">cavabanga</a>
-                </div>
-            </div>
-        </div>
-        <div class="answer__box">
-            <div class="avatar__answwer__box">
-                <img class="avatar__answer"
-                     src="https://img2.freepng.ru/20180810/otz/kisspng-computer-icons-avatar-vector-graphics-icon-design-charlie-chaplin-icon-free-avatars-iconset-diversit-5b6d7ab287dce5.0643184415339014905565.jpg">
-                <button type="image" class="like__box">
-                    <img src="img/like-10465.png" class="img__like">
-                    <div class="answer__like_font_box">
-                        1к
-                    </div>
-                </button>
-            </div>
-            <div class="question__main__inf__box">
-                <div class="question__title">
-                    answer!!!!!
-                </div>
-                <div class="main__inf">
-                    Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу
-                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
-                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
-                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
-                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
-                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
-                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
-                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
-                    системы обучения кадров, соответствует насущным потребностям.
-                </div>
-                <div class="check__box">
-                    <input type="checkbox" class="checkbox">
-                    <div class="tags">
-                        correct?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="answer__box">
-            <div class="avatar__answwer__box">
-                <img class="avatar__answer"
-                     src="https://img2.freepng.ru/20180810/otz/kisspng-computer-icons-avatar-vector-graphics-icon-design-charlie-chaplin-icon-free-avatars-iconset-diversit-5b6d7ab287dce5.0643184415339014905565.jpg">
-                <button type="image" class="like__box">
-                    <img src="img/like-10465.png" class="img__like">
-                    <div class="answer__like_font_box">
-                        1к
-                    </div>
-                </button>
-            </div>
-            <div class="question__main__inf__box">
-                <div class="question__title">
-                    answer!!!!!
-                </div>
-                <div class="main__inf">
-                    Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу
-                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
-                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
-                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
-                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
-                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
-                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
-                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
-                    системы обучения кадров, соответствует насущным потребностям.
-                </div>
-                <div class="check__box">
-                    <input type="checkbox" class="checkbox">
-                    <div class="tags">
-                        correct?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page__bar">
-            <button class="page__bar__button">
-                1
-            </button>
-            <button class="page__bar__button">
-                2
-            </button>
-            ...
-            <button class="page__bar__button">
-                43
-            </button>
-        </div>
 
-        <div class="answer__field__box">
-            <textarea class="answer__textarea__box">
-            </textarea>
+            <div class="right">
+                <div class="title__tag">
+                    <a href="#" class="title__text">
+                        Questions
+                    </a>
+                </div>
+                <div class="text">
+                    Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу
+                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
+                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
+                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
+                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
+                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
+                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
+                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
+                    системы обучения кадров, соответствует насущным потребностям.
+                </div>
+                <div class="row">
+                    <div class="tags">
+                        <div class="tags__tag">
+                            Tags:
+                        </div>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                    </div>
+                    <a class="tag" href="#">
+                        Answer(0)
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="answer__button__box">
-            <button class="answer__button">
-                Answer
-            </button>
+        <div class="post post_m">
+            <div class="left">
+                <img class="avatar" src="{% static "img/chaplin.jpg" %}">
+                <div class="name">
+                    Чарли Чаплин
+                </div>
+                <button type="image" class="like__box">
+                    <img src="{% static "img/like-10465.png" %}" class="img__like">
+                    <div class="like_font_box">
+                        1к
+                    </div>
+                </button>
+            </div>
+
+            <div class="right">
+                <div class="title__tag">
+                    <a href="#" class="title__text">
+                        Questions
+                    </a>
+                </div>
+                <div class="text">
+                    Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу
+                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
+                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
+                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
+                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
+                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
+                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
+                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
+                    системы обучения кадров, соответствует насущным потребностям.
+                </div>
+                <div class="row">
+                    <div class="tags">
+                        <div class="tags__tag">
+                            Tags:
+                        </div>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                    </div>
+                    <a class="tag" href="#">
+                        Answer(0)
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="post post_m">
+            <div class="left">
+                <img class="avatar" src="{% static "img/chaplin.jpg" %}">
+                <div class="name">
+                    Чарли Чаплин
+                </div>
+                <button type="image" class="like__box">
+                    <img src="{% static "img/like-10465.png" %}" class="img__like">
+                    <div class="like_font_box">
+                        1к
+                    </div>
+                </button>
+            </div>
+
+            <div class="right">
+                <div class="title__tag">
+                    <a href="#" class="title__text">
+                        Questions
+                    </a>
+                </div>
+                <div class="text">
+                    Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу
+                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
+                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
+                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
+                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
+                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
+                    заданий играет важную роль в формировании новых предложений.
+                </div>
+                <div class="row">
+                    <div class="tags">
+                        <div class="tags__tag">
+                            Tags:
+                        </div>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                        <a class="tag" href="#">
+                            Кавабанга
+                        </a>
+                    </div>
+                    <a class="tag" href="#">
+                        Answer(0)
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -220,10 +253,19 @@
             <a href="#" class="member">Madara</a>
         </div>
     </div>
+
+</div>
+<div class="page__bar">
+    <button class="page__bar__button">
+        1
+    </button>
+    <button class="page__bar__button">
+        2
+    </button>
+    ...
+    <button class="page__bar__button">
+        43
+    </button>
 </div>
 </body>
 </html>
-
-
-
-

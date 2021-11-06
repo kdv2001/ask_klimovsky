@@ -1,73 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="{% static "css/index.css" %}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>index</title>
 </head>
 <body>
-<div class="header">
-    <div class="logo">
-        ASK KDV
-    </div>
-
-    <div class="search">
-        <input class="search-input" type="text">
-        <button href="#" class="button">
-            ASK!
-        </button>
-    </div>
-
-    <div class="user__box">
-        <img class="avatar"
-             src="img/555_text.png">
-        <div class="user__buttons">
-            <div class="user__box__name">
-                UserName
-            </div>
-            <div class="user__box">
-                <div class="button">
-                    settings
-                </div>
-                <div class="button">
-                    log out
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="login__box">
-    <div class="left">
-        <div class="login__title">
-            Log In
-        </div>
-        <div class="wrong__pswd">
-            Sorry, wrong password
-        </div>
-        <div class="login__input__box">
-            <div class="ligin__input__title">
-                login
-            </div>
-            <input class="login__input" type="text">
-        </div>
-        <div class="login__input__box">
-            <div class="ligin__input__title">
-                password
-            </div>
-            <input class="login__input" type="text">
-        </div>
-        <div class="login__button__box">
-            <button href="#" class="button__login">
-                log in!
-            </button>
-        </div>
-        <div class="new__account">
-            <a href="#">
-                Create new account
-            </a>
-        </div>
+{% include "incl/navBar.html" %}
+<div class="page__body">
+    <div class="posts__body">
+        {% block block_content %}
+        {% endblock %}
     </div>
     <div class="tags__body">
         <div class="tags__body-title">
@@ -130,11 +75,7 @@
             <a href="#" class="member">Madara</a>
         </div>
     </div>
-
-
 </div>
-
-
-
+{% include "incl/paginate.html" %}
 </body>
 </html>

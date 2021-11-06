@@ -1,0 +1,47 @@
+{% load static %}
+<div class="post post_m">
+    <div class="left">
+        <img class="avatar" src="{% static "img/chaplin.jpg" %}">
+        <div class="name">
+            Чарли Чаплин
+        </div>
+        <button type="image" class="like__box">
+            <img src="{% static "img/like-10465.png" %}" class="img__like">
+            <div class="like_font_box">
+                1к
+            </div>
+        </button>
+    </div>
+
+    <div class="right">
+        <div class="title__tag">
+            <a href="../question/" class="title__text">
+                {{ question.title }}
+            </a>
+        </div>
+        <div class="text">
+            {{ question.text }}
+        </div>
+        <div class="row">
+            <div class="tags">
+                <div class="tags__tag">
+                    Tags:
+                </div>
+                <a class="tag" href="#">
+                    Кавабанга
+                </a>
+                <a class="tag" href="#">
+                    Кавабанга
+                </a>
+                <a class="tag" href="#">
+                    Кавабанга
+                </a>
+            </div>
+            <div class="tags">
+                <a class="tag" href="#">
+                    Answer(0)
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

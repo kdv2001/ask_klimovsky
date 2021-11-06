@@ -1,0 +1,9 @@
+{% extends "incl/base.html" %}
+{% load static %}
+{% block block_content %}
+    {% for question in questions %}
+    {% include "incl/singleQuestion.html" %}
+    {% endfor %}
+{% endblock %}
+
+

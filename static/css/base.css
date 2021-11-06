@@ -281,3 +281,25 @@ body {
     justify-content: center;
     border-color: #822E81FF;
 }
+
+.like__box {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    margin-top: 20%;
+    flex-direction: row;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.img__like {
+    display: flex;
+    width: 60%;
+}
+
+.like_font_box {
+    display: flex;
+    flex-direction: row;
+    font-size: 200%;
+}

@@ -13,7 +13,7 @@ body {
     background-color: #afafdc;
 
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -49,6 +49,11 @@ body {
     box-sizing: border-box;
 }
 
+.user__box {
+    display: flex;
+    flex-direction: row;
+}
+
 .button {
     margin-left: 5px;
     margin-right: 5px;
@@ -66,115 +71,141 @@ body {
     justify-content: center;
 }
 
-.user__box {
+.button {
+
+}
+
+
+.body {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;
     flex-wrap: nowrap;
-    justify-content: flex-end;
 
-}
-
-.user__buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-.user__box__name {
-    display: flex;
-    flex-direction: column;
-    font-size: 35px;
-    color: white;
-}
-.avatar {
-    display: flex;
-    /*justify-content: start;*/
-    padding-right: 10px;
-    width: 7%;
-    object-fit: cover;
-}
-
-.login__box {
-    display: flex;
-    flex-direction: row;
-    margin-top: 160px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 150px;
+    box-sizing: border-box;
 }
 
 .left {
     display: flex;
     flex-direction: column;
     width: 70%;
+    align-content: center;
 }
 
-.wrong__pswd{
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+ }
+
+.login__text {
     display: flex;
     flex-direction: row;
+    width: 40%;
+    font-size: 25px;
     justify-content: center;
-
-    font-size: 20px;
-    font-style: italic;
-    margin-top: 15px;
-    color: red;
-}
-
-.login__title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    font-size: 50px;
 }
 
 .login__input__box {
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    align-content: center;
-    margin-top: 20px;
-    padding-right: 23%;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
 }
 
 .login__input {
-    padding-left: 10px;
-    padding-right: 10px;
-
-    outline: none;
-    /*border: none;*/
-    border-radius: 15px;
-
     display: flex;
-    height: 30px;
-    width: 700px;
+    width: 60%;
+    border-radius: 10px;
+    font-size: 25px;
+}
+.login__input__choose {
+    display: flex;
+    width: 42%;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.img__box {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+}
+.avatar__Box {
+    display: flex;
+    width: 30%;
+}
+
+.User__title {
+    display: flex;
+    font-size: 220%;
+    padding-left: 30%;
+}
+
+
+.tags__body {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 50px;
     box-sizing: border-box;
 }
 
-.ligin__input__title {
-    display: flex;
-    font-size: 23px;
-    margin-right: 5px;
-}
-
-.button__login {
-    font-size: 25px;
-    border-radius: 20px;
-    width: 110px;
-    height: 40px;
-}
-
-.new__account {
+.buttons-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    font-size: 25px;
-    margin-top: 15px;
 }
 
-.login__button__box {
+.post {
+    width: 100%;
+
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    background-color: #d2e4c4;
+
+    padding: 30px;
+    box-sizing: border-box;
+
+    border-radius: 32px;
+    border: solid 1px #e2e2e2;
+    box-shadow: 0px 8px 20px rgb(0 0 0 / 12%);
+}
+
+.post_m {
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 70%;
+    /*display: flex;*/
+    object-fit: cover;
+}
+
+.name {
     margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.right {
+    width: 80%;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .tag {
@@ -244,15 +275,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.tags__body {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-
-    padding-left: 50px;
-    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .member {
@@ -270,11 +294,5 @@ body {
 
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.title__tag {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
