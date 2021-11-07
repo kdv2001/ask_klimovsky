@@ -1,0 +1,26 @@
+{% load static %}
+<div class="answer__box">
+    <div class="avatar__answwer__box__question">
+        <img class="avatar__answer" src="{% static "img/chaplin.jpg" %}">
+        <button type="image" class="like__box__question">
+            <img src="{% static "img/like-10465.png" %}" class="img__like__question">
+            <div class="answer__like_font_box__question">
+                1к
+            </div>
+        </button>
+    </div>
+    <div class="question__main__inf__box__question">
+        <div class="question__title__question">
+            {{ answer.title }}
+        </div>
+        <div class="main__inf__question">
+            {{ answer.text }}
+        </div>
+        <div class="check__box">
+            <input type="checkbox" class="checkbox">
+            <div class="tags__question">
+                correct?
+            </div>
+        </div>
+    </div>
+</div>

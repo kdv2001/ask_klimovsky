@@ -8,9 +8,13 @@
     <title>index</title>
 </head>
 <body>
-{% include "incl/navBar.html" %}
+{% include "incl/authNavBar.html" %}
 <div class="page__body">
+    {% block block_content_q %}
+    {% endblock %}
     <div class="posts__body">
+        {% block block_pred_title %}
+        {% endblock %}
         {% block block_content %}
         {% endblock %}
     </div>
@@ -76,6 +80,8 @@
         </div>
     </div>
 </div>
-{% include "incl/paginate.html" %}
+{% block block_pagination %}
+{% endblock %}
 </body>
 </html>
+

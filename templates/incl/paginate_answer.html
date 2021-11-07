@@ -1,0 +1,23 @@
+<div class="page__bar">
+    {% if answers.next_page_number > 4 or not answers.has_next%}
+        <button class="page__bar__button" onclick="location.href='?page=1';">
+            1
+        </button>
+        ...
+    {% endif %}
+    {% if answers.has_previous %}
+        <button class="page__bar__button" onclick="location.href='?page={{ answers.previous_page_number }}';">
+            {{ answers.previous_page_number }}
+        </button>
+    {% endif %}
+    {% if answers.has_next %}
+        <button class="page__bar__button" onclick="location.href='?page={{ answers.next_page_number }}';">
+            <a href="?page={{ answers.next_page_number }}"></a>
+            {{ answers.next_page_number }}
+        </button>
+    {% endif %}
+    ...
+    <button class="page__bar__button" onclick="location.href='?page={{ answers.paginator.num_pages }}';">
+        {{ answers.paginator.num_pages }}
+    </button>
+</div>

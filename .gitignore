@@ -128,4 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-.idea/askme_klimovsky.iml
+.idea/
+.idea

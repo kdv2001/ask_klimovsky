@@ -1,0 +1,26 @@
+{% load static %}
+<div class="question__box__question">
+    <div class="avatar__main__box__question">
+        <img class="avatar__answer" src="{% static "img/chaplin.jpg" %}">
+        <button type="image" class="like__box__question">
+            <img src="{% static "img/like-10465.png" %}" class="img__like__question">
+            <div class="like_font_box__question">
+                1к
+            </div>
+        </button>
+    </div>
+    <div class="question__main__inf__box__question">
+        <div class="question__title__question">
+            {{ questions.title }}
+        </div>
+        <div class="main__inf__question">
+            {{ questions.text }}
+        </div>
+        <div class="tags__box__question">
+            <div class="tags__question">
+                Tags:
+            </div>
+            <a href="#" class="tag__question">cavabanga</a>
+        </div>
+    </div>
+</div>

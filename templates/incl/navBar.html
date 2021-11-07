@@ -1,19 +1,19 @@
 <div class="header">
-    <div class="logo">
+    <div class="logo" onclick="location.href='{% url 'index' %}';">
         ASK KDV
     </div>
     <div class="search">
         <input class="search-input" type="text">
 
-        <button href="#" class="button">
+        <button onclick="location.href='{% url 'ask' %}';" class="button">
             ASK!
         </button>
     </div>
     <div class="buttons-wrapper">
-        <div class="button">
-            register
+        <div class="button" onclick="location.href='{% url 'signup' %}';">
+            signup
         </div>
-        <div class="button">
+        <div class="button" onclick="location.href='{% url 'login' %}';">
             login
         </div>
     </div>

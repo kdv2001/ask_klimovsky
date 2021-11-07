@@ -1,229 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/question.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>question</title>
-</head>
-<body>
-<div class="header">
-    <div class="logo">
-        ASK KDV
+{#{% load static %}#}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <link rel="stylesheet" href="{%  static "css/question.css" %}"/>#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>question</title>#}
+{#</head>#}
+{#<body>#}
+{#<div class="header">#}
+{#    <div class="logo">#}
+{#        ASK KDV#}
+{#    </div>#}
+{#    <div class="search">#}
+{#        <input class="search-input" type="text">#}
+{##}
+{#        <button href="#" class="button">#}
+{#            ASK!#}
+{#        </button>#}
+{#    </div>#}
+{#    <div class="buttons-wrapper">#}
+{#        <div class="button">#}
+{#            register#}
+{#        </div>#}
+{#        <div class="button">#}
+{#            login#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#<div class="page__body">#}
+{#    <div class="left">#}
+{#        {% include "incl/question.html" %}#}
+{#        {% include "incl/answer.html" %}#}
+{##}
+{#        <div class="page__bar">#}
+{#            <button class="page__bar__button">#}
+{#                1#}
+{#            </button>#}
+{#            <button class="page__bar__button">#}
+{#                2#}
+{#            </button>#}
+{#            ...#}
+{#            <button class="page__bar__button">#}
+{#                43#}
+{#            </button>#}
+{#        </div>#}
+{##}
+{#        <div class="answer__field__box">#}
+{#            <textarea class="answer__textarea__box">#}
+{#            </textarea>#}
+{#        </div>#}
+{#        <div class="answer__button__box">#}
+{#            <button class="answer__button">#}
+{#                Answer#}
+{#            </button>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="tags__body">#}
+{#        <div class="tags__body-title">#}
+{#            Popular tags#}
+{#        </div>#}
+{#        <div class="tags__body-tags">#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#            <a class="tag tags__body-tag-m" href="#">#}
+{#                Кавабанга#}
+{#            </a>#}
+{#        </div>#}
+{#        <div class="tags__body-title">#}
+{#            Best members#}
+{#        </div>#}
+{#        <div class="tags__body-members">#}
+{#            <a href="#" class="member">Madara</a>#}
+{#            <a href="#" class="member">Madara</a>#}
+{#            <a href="#" class="member">Madara</a>#}
+{#            <a href="#" class="member">Madara</a>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#</body>#}
+{#</html>#}
+{##}
+{##}
+{##}
+{##}
+
+{% extends "incl/base.html" %}
+{% load static %}
+
+{% block block_content_q %}
+    <div class="left__question">
+        {% include "incl/question.html" %}
+        {% for answer in answers %}
+            {% include "incl/answer.html" %}
+        {% endfor %}
+
+        {% include "incl/paginate_answer.html" %}
+        {% include "incl/textarea_answer.html" %}
     </div>
-
-    <div class="search">
-        <input class="search-input" type="text">
-
-        <button href="#" class="button">
-            ASK!
-        </button>
-    </div>
-
-
-    <div class="buttons-wrapper">
-        <div class="button">
-            register
-        </div>
-        <div class="button">
-            login
-        </div>
-    </div>
-</div>
-
-<div class="page__body">
-    <div class="left">
-        <div class="question__box">
-            <div class="avatar__main__box">
-                <img class="avatar__main"
-                     src="https://img2.freepng.ru/20180810/otz/kisspng-computer-icons-avatar-vector-graphics-icon-design-charlie-chaplin-icon-free-avatars-iconset-diversit-5b6d7ab287dce5.0643184415339014905565.jpg">
-                <button type="image" class="like__box">
-                    <img src="../static/img/like-10465.png" class="img__like">
-                    <div class="like_font_box">
-                        1к
-                    </div>
-                </button>
-            </div>
-            <div class="question__main__inf__box">
-                <div class="question__title">
-                    question??
-                </div>
-                <div class="main__inf">
-                    Повседневная практика показывает, что консультация сироким активом обеспечивает широкому кругу
-                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
-                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
-                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
-                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
-                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
-                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
-                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
-                    системы обучения кадров, соответствует насущным потребностям.
-                </div>
-                <div class="tags__box">
-                    <div class="tags">
-                        Tags:
-                    </div>
-                    <a href="#" class="tag__question">cavabanga</a>
-                </div>
-            </div>
-        </div>
-        <div class="answer__box">
-            <div class="avatar__answwer__box">
-                <img class="avatar__answer"
-                     src="https://img2.freepng.ru/20180810/otz/kisspng-computer-icons-avatar-vector-graphics-icon-design-charlie-chaplin-icon-free-avatars-iconset-diversit-5b6d7ab287dce5.0643184415339014905565.jpg">
-                <button type="image" class="like__box">
-                    <img src="../static/img/like-10465.png" class="img__like">
-                    <div class="answer__like_font_box">
-                        1к
-                    </div>
-                </button>
-            </div>
-            <div class="question__main__inf__box">
-                <div class="question__title">
-                    answer!!!!!
-                </div>
-                <div class="main__inf">
-                    Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу
-                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
-                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
-                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
-                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
-                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
-                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
-                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
-                    системы обучения кадров, соответствует насущным потребностям.
-                </div>
-                <div class="check__box">
-                    <input type="checkbox" class="checkbox">
-                    <div class="tags">
-                        correct?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="answer__box">
-            <div class="avatar__answwer__box">
-                <img class="avatar__answer"
-                     src="https://img2.freepng.ru/20180810/otz/kisspng-computer-icons-avatar-vector-graphics-icon-design-charlie-chaplin-icon-free-avatars-iconset-diversit-5b6d7ab287dce5.0643184415339014905565.jpg">
-                <button type="image" class="like__box">
-                    <img src="../static/img/like-10465.png" class="img__like">
-                    <div class="answer__like_font_box">
-                        1к
-                    </div>
-                </button>
-            </div>
-            <div class="question__main__inf__box">
-                <div class="question__title">
-                    answer!!!!!
-                </div>
-                <div class="main__inf">
-                    Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу
-                    (специалистов) участие в формировании существенных финансовых и административных условий. Равным
-                    образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает
-                    создание форм развития. Идейные соображения высшего порядка, а также новая модель организационной
-                    деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении
-                    поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
-                    заданий играет важную роль в формировании новых предложений. Таким образом начало повседневной
-                    работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании
-                    системы обучения кадров, соответствует насущным потребностям.
-                </div>
-                <div class="check__box">
-                    <input type="checkbox" class="checkbox">
-                    <div class="tags">
-                        correct?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page__bar">
-            <button class="page__bar__button">
-                1
-            </button>
-            <button class="page__bar__button">
-                2
-            </button>
-            ...
-            <button class="page__bar__button">
-                43
-            </button>
-        </div>
-
-        <div class="answer__field__box">
-            <textarea class="answer__textarea__box">
-            </textarea>
-        </div>
-        <div class="answer__button__box">
-            <button class="answer__button">
-                Answer
-            </button>
-        </div>
-    </div>
-
-    <div class="tags__body">
-        <div class="tags__body-title">
-            Popular tags
-        </div>
-        <div class="tags__body-tags">
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-        </div>
-        <div class="tags__body-title">
-            Best members
-        </div>
-        <div class="tags__body-members">
-            <a href="#" class="member">Madara</a>
-            <a href="#" class="member">Madara</a>
-            <a href="#" class="member">Madara</a>
-            <a href="#" class="member">Madara</a>
-        </div>
-    </div>
-</div>
-</body>
-</html>
-
-
-
+{% endblock %}
 

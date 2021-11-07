@@ -1,0 +1,29 @@
+{% load static %}
+<div class="header">
+    <div class="logo" onclick="location.href='{% url 'index' %}';">
+        ASK KDV
+    </div>
+    <div class="search">
+        <input class="search-input" type="text">
+        <button onclick="location.href='{% url 'ask' %}';" class="button">
+            ASK!
+        </button>
+    </div>
+    <div class="user__box">
+        <img class="avatar__login"
+             src="{% static "img/555_text.png" %}">
+        <div class="user__buttons">
+            <div class="user__box__name">
+                UserName
+            </div>
+            <div class="user__box">
+                <div class="button" onclick="location.href='{% url 'settings' %}';">
+                    settings
+                </div>
+                <div class="button">
+                    log out
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
