@@ -8,7 +8,16 @@
     {% include "incl/singleQuestion.html" %}
     {% endfor %}
 {% endblock %}
-
+{% block tags_body_block %}
+    {% for tag_block in tags_block %}
+        {% include "incl/tags_base.html" %}
+    {% endfor %}
+{% endblock %}
+{% block best_members_block %}
+    {% for best_member_block in best_members_block %}
+        {% include "incl/best_members.html" %}
+    {% endfor %}
+{% endblock %}
 {% block block_pagination %}
     {% include "incl/paginate.html" %}
 {% endblock %}

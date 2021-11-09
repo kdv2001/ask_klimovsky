@@ -3,12 +3,12 @@
     <div class="left">
         <img class="avatar" src="{% static "img/chaplin.jpg" %}">
         <div class="name">
-            Чарли Чаплин
+            {{ question.user }}
         </div>
         <button type="image" class="like__box">
             <img src="{% static "img/like-10465.png" %}" class="img__like">
             <div class="like_font_box">
-                1к
+                {{ question.like }}
             </div>
         </button>
     </div>
@@ -27,19 +27,18 @@
                 <div class="tags__tag">
                     Tags:
                 </div>
-                <a class="tag" href="#">
-                    Кавабанга
-                </a>
-                <a class="tag" href="#">
-                    Кавабанга
-                </a>
-                <a class="tag" href="#">
-                    Кавабанга
-                </a>
+                {% block tags_body_block %}
+                    {% for tag in question.tags %}
+                        <a class="tag" href="{% url 'tag' tag.tag %}">
+                            {{ tag.tag }}
+                            {{ question.number }}
+                        </a>
+                    {% endfor %}
+                {% endblock %}
             </div>
             <div class="tags">
-                <a class="tag" href="#">
-                    Answer(0)
+                <a class="tag" href="{% url 'question' question.number %}">
+                    {{ question.answers }}
                 </a>
             </div>
         </div>

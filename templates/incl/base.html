@@ -8,10 +8,8 @@
     <title>index</title>
 </head>
 <body>
-{% include "incl/authNavBar.html" %}
+{% include "incl/navBar.html" %}
 <div class="page__body">
-    {% block block_content_q %}
-    {% endblock %}
     <div class="posts__body">
         {% block block_pred_title %}
         {% endblock %}
@@ -23,60 +21,15 @@
             Popular tags
         </div>
         <div class="tags__body-tags">
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
-            <a class="tag tags__body-tag-m" href="#">
-                Кавабанга
-            </a>
+            {% block tags_body_block %}
+            {% endblock %}
         </div>
         <div class="tags__body-title">
             Best members
         </div>
         <div class="tags__body-members">
-            <a href="#" class="member">Madara</a>
-            <a href="#" class="member">Madara</a>
-            <a href="#" class="member">Madara</a>
-            <a href="#" class="member">Madara</a>
+            {% block best_members_block %}
+            {% endblock %}
         </div>
     </div>
 </div>

@@ -5,7 +5,7 @@
         <button type="image" class="like__box__question">
             <img src="{% static "img/like-10465.png" %}" class="img__like__question">
             <div class="like_font_box__question">
-                1к
+                {{ questions.like }}
             </div>
         </button>
     </div>
@@ -20,7 +20,13 @@
             <div class="tags__question">
                 Tags:
             </div>
-            <a href="#" class="tag__question">cavabanga</a>
+            {% block tags_body_block %}
+                {% for tag in questions.tags %}
+                    <a href="{% url 'tag' tag.tag %}" class="tag__question">
+                        {{ tag.tag }}
+                    </a>
+                {% endfor %}
+            {% endblock %}
         </div>
     </div>
 </div>

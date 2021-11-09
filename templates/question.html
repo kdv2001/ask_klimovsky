@@ -128,8 +128,7 @@
 
 {% extends "incl/base.html" %}
 {% load static %}
-
-{% block block_content_q %}
+{% block block_content %}
     <div class="left__question">
         {% include "incl/question.html" %}
         {% for answer in answers %}
@@ -139,5 +138,15 @@
         {% include "incl/paginate_answer.html" %}
         {% include "incl/textarea_answer.html" %}
     </div>
+{% endblock %}
+{% block tags_body_block %}
+    {% for tag_block in tags_block %}
+        {% include "incl/tags_base.html" %}
+    {% endfor %}
+{% endblock %}
+{% block best_members_block %}
+    {% for best_member_block in best_members_block %}
+        {% include "incl/best_members.html" %}
+    {% endfor %}
 {% endblock %}
 

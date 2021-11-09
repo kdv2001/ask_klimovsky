@@ -222,6 +222,7 @@ body {
 .tags__body-members {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -235,7 +236,7 @@ body {
     margin-right: 5px;
     border-width: 2px;
     border-style: solid;
-
+    margin-top: 10px;
     border-color: #84338d;
 
     display: flex;
@@ -527,10 +528,9 @@ body {
     flex-direction: row;
     /*margin-left: 120px;*/
     align-content: center;
-    width: 50%;
     justify-content: end;
     margin-top: 20px;
-    margin-left: 250px;
+    margin-right: 25%;
 }
 
 .register__box__title {
@@ -594,8 +594,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 400px;
     margin-top: 20px;
+    margin-left: 10%;
 }
 
 .register__button {
@@ -887,25 +887,6 @@ body {
     height: 30px;
 }
 
-
-.tag {
-    text-decoration: none;
-    border-radius: 10px;
-    height: 30px;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 5px 10px 5px 10px;
-    margin-right: 5px;
-    border-width: 2px;
-    border-style: solid;
-
-    border-color: #84338d;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .answer {
     font-size: 15px;
     font-weight: bold;
@@ -923,6 +904,5 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 10%;
 }
 
