@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
+from app.models import Question, Answer, Like
 from django.http import HttpResponse
 
 # Create your views here
@@ -75,7 +76,9 @@ best_members = [
 
 
 def index(request):
-    paginator = Paginator(questions_base, 5)
+    questions_new = Question.objects.get_questions()
+
+    paginator = Paginator(questions_new, 5)
     page = request.GET.get('page')
     content_base = paginator.get_page(page)
     return render(request, "index.html",
@@ -91,7 +94,9 @@ def hot(request):
 
 
 def tag(request, choose_tag):
-    paginator = Paginator(questions_base, 5)
+    questions_tag = Question.objects.get_question_tag(choose_tag)
+
+    paginator = Paginator(questions_tag, 5)
     page = request.GET.get('page')
     content_tag = paginator.get_page(page)
     return render(request, "base.html",
@@ -100,11 +105,13 @@ def tag(request, choose_tag):
 
 
 def question(request, number):
-    paginator = Paginator(answers, 5)
+    question = Question.objects.get_question(number)
+    answer = Answer.objects.get_answers(number)
+    paginator = Paginator(answer, 5)
     page = request.GET.get('page')
     content_answer = paginator.get_page(page)
     return render(request, "question.html",
-                  {'questions': questions_base[number], 'answers': content_answer, 'tags_block': popular_tags,
+                  {'questions': question, 'answers': content_answer, 'tags_block': popular_tags,
                    'best_members_block': best_members})
 
 
