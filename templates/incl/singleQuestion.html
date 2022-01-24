@@ -31,7 +31,6 @@
                     {% for tag in question.tags %}
                         <a class="tag" href="{% url 'tag' tag.tag %}">
                             {{ tag.tag }}
-                            {{ question.number }}
                         </a>
                     {% endfor %}
                 {% endblock %}

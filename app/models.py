@@ -2,12 +2,23 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.contrib.contenttypes.fields import GenericForeignKey
 
+class ProfileManager(models.Manager):
+    def get_best_members(self):
+        data = self.all()
+        best_members = [
+            {
+                "member": i.name
+            }for i in data
+        ]
+        return best_members
 
 class Profile(models.Model):
     avatar = models.ImageField(max_length=64, default='/static/img/chaplin.jpg')
     name = models.CharField(max_length=64)
 
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    objects = ProfileManager()
 
     def __str__(self):
         return ''.join([self.name])
@@ -22,11 +33,7 @@ class Tag(models.Model):
 
 class QuestionManager(models.Manager):
     def get_questions(self):
-        data = self.all()
-        # title = self.get(pk=i).title
-        # user = self.get(pk=i).author.name
-        # tag = self.get(pk=i).tag
-        # text = self.get(pk=i).text
+        data = self.order_by('-id')
         questions_base = [
             {
                 "user": i.author.name,
@@ -57,7 +64,10 @@ class QuestionManager(models.Manager):
         return question_base
 
     def get_question_tag(self, choose_tag):
-        data = self.filter(tag__tag__icontains = choose_tag)
+        data = self.filter(tag__tag__icontains=choose_tag)
+        if not data:
+            return 0;
+
         questions_tag = [
             {
                 "user": i.author.name,
@@ -69,10 +79,9 @@ class QuestionManager(models.Manager):
                 "tags": [{
                     "tag": f"{j}"
                 } for j in i.tag.all()]
-            } for i in data
+            } for i in data.order_by('-id')
         ]
         return questions_tag
-
 
 
 class Question(models.Model):
@@ -99,12 +108,9 @@ class AnswerManager(models.Manager):
                 "text": i.Text,
                 "number": i.pk,
                 "like": 100,
-            } for i in data
+            } for i in data.order_by('-id')
         ]
         return answers_base
-
-
-
 
 
 class Answer(models.Model):
@@ -122,3 +128,6 @@ class Like(models.Model):
     author = models.ForeignKey(Profile, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
+
+
+class 
